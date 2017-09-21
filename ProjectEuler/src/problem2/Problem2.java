@@ -2,7 +2,7 @@ package problem2;
 
 import problemResult.*;
 
-public class Problem2 extends ResultGenerator
+public class Problem2 extends EulerSolution
 {
 	
 	FibonacciSequencer fibonacciSequencer;
@@ -14,24 +14,24 @@ public class Problem2 extends ResultGenerator
 		this.fibonacciSequencer  = fibonacciSequencer;
 	}
 	
-	protected int GetTestValue()
+	protected int getTestValue()
 	{
-		return CalculateSumOfEvensBelow(100);
+		return calculateSumOfEvensBelow(100);
 	}
 	
-	protected int GetActualValue()
+	protected int getActualValue()
 	{
-		return CalculateSumOfEvensBelow(4000000);
+		return calculateSumOfEvensBelow(4000000);
 	}
 	
-	int CalculateSumOfEvensBelow(int limit)
+	int calculateSumOfEvensBelow(int limit)
 	{
 		int sum = 0;
-		fibonacciSequencer.Reset();
+		fibonacciSequencer.reset();
 		
 		while(true)
 		{
-			int next = fibonacciSequencer.GetNextAndAdvance();
+			int next = fibonacciSequencer.getNextAndAdvance();
 			
 			if(next > limit)
 				return sum;

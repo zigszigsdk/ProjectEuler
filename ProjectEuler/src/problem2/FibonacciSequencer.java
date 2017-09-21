@@ -5,7 +5,7 @@ public class FibonacciSequencer
 	int currentHigh = 0;
 	int currentLow = 0;
 	
-	public int GetNextAndAdvance()
+	public int getNextAndAdvance()
 	{
 		if(currentHigh == 0)	
 		{	
@@ -26,7 +26,7 @@ public class FibonacciSequencer
 		return currentHigh;
 	}
 	
-	public void Reset() 
+	public void reset() 
 	{
 		currentHigh = 0;
 		currentLow = 0;

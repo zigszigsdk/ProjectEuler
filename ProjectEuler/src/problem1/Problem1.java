@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import problemResult.*;
 
-public class Problem1 extends ResultGenerator
+public class Problem1 extends EulerSolution
 {
 	MultipleFinder finder;
 	ArrayList<Integer> multipliers;
@@ -18,22 +18,22 @@ public class Problem1 extends ResultGenerator
 		this.finder = finder;
 	}
 	
-	protected int GetTestValue()
+	protected int getTestValue()
 	{
-		return Calculate(multipliers, 10);
+		return calculate(multipliers, 10);
 	}
 	
-	protected int GetActualValue()
+	protected int getActualValue()
 	{
-		return Calculate(multipliers, 1000);
+		return calculate(multipliers, 1000);
 	}
 	
-	int Calculate(ArrayList<Integer> multipliers, int upTo)
+	int calculate(ArrayList<Integer> multipliers, int upTo)
 	{
-		return Sum(finder.getUnder(multipliers, upTo));
+		return sum(finder.getUnder(multipliers, upTo));
 	}
 	
-	int Sum(ArrayList<Integer> input)
+	int sum(ArrayList<Integer> input)
 	{
 		int sum = 0;
 		for(int value : input)

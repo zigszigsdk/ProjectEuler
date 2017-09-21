@@ -11,9 +11,9 @@ public class BothResults
 		this.actual = actual;
 	}
 	
-	public void Print(int problemNumber)
+	public void print(int problemNumber)
 	{	
-		test.Print(problemNumber, ResultType.TEST);
-		actual.Print(problemNumber, ResultType.ACTUAL);
+		test.print(problemNumber, ResultType.TEST);
+		actual.print(problemNumber, ResultType.ACTUAL);
 	}
 }

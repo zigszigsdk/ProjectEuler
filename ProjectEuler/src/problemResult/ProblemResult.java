@@ -15,7 +15,7 @@ public class ProblemResult
 	
 	public ProblemResult(double value, long msTaken) { this(Double.toString(value), msTaken); }
 	
-	public void Print(int problemNumber, ResultType type)
+	public void print(int problemNumber, ResultType type)
 	{
 		String timeText;
 		if(msTaken == 0)

@@ -1,20 +1,18 @@
 package entryPoint;
 
-import problemResult.ResultGenerator;
-
-import problem1.Problem1;
-import problem2.Problem2;
+import problemResult.EulerSolution;
 
 public class EntryPoint
 {
 	public static void main(String[] args)
 	{
-		ResultGenerator[] resultGenerators = new ResultGenerator[]
-				{ new Problem1()
-				, new Problem2()
+		EulerSolution[] resultGenerators = new EulerSolution[]
+				{ new problem1.Problem1()
+				, new problem2.Problem2()
+				, new problem3.Problem3()
 				};
 		
 		for(int index = 0; index < resultGenerators.length; index++)
-			resultGenerators[index].PrintBoth(index+1);
+			resultGenerators[index].printBoth(index+1);
 	}
 }

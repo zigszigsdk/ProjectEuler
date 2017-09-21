@@ -1,7 +1,9 @@
 package entryPoint;
 
 import problemResult.ResultGenerator;
+
 import problem1.Problem1;
+import problem2.Problem2;
 
 public class EntryPoint
 {
@@ -9,6 +11,7 @@ public class EntryPoint
 	{
 		ResultGenerator[] resultGenerators = new ResultGenerator[]
 				{ new Problem1()
+				, new Problem2()
 				};
 		
 		for(int index = 0; index < resultGenerators.length; index++)

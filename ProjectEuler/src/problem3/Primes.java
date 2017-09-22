@@ -49,10 +49,10 @@ public class Primes
 	    if(candidate.equals(TWO))
 			return true;
 	    
-	    if(candidate.mod(TWO).equals(ZERO))
+	    if(candidate.mod(TWO).equals(ZERO))	
 	        return false;
 
-	    BigInteger candidateSqrt = sqrt.ceil(candidate);
+	    BigInteger candidateSqrt = sqrt.floor(candidate);
 	    
 	    for(BigInteger challenger = THREE
 	    ;	challenger.compareTo(candidateSqrt) < 0

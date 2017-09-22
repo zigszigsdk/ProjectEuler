@@ -33,9 +33,9 @@ public class Problem3 extends EulerSolution
 	
 	int findLargestPrimeFactorOf(BigInteger target)
 	{
-			BigInteger targetSqrt = sqrt.floor(target);
+		BigInteger targetSqrt = sqrt.floor(target);
 		
-		for(BigInteger candidate = targetSqrt.mod(TWO).equals(ZERO) ? targetSqrt.subtract(ONE) : targetSqrt
+		for(BigInteger candidate = targetSqrt.subtract(ONE).nextProbablePrime()
 		;	candidate.compareTo(THREE) >= 0
 		;	candidate = candidate.subtract(TWO)
 		) {

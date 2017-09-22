@@ -2,7 +2,6 @@ package problem5;
 
 import problemResult.*;
 import java.util.ArrayList;
-import problem3.Primes;
 
 public class Problem5 extends EulerSolution
 {

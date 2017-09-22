@@ -2,6 +2,7 @@ package problem5;
 
 import problemResult.*;
 import java.util.ArrayList;
+import problem3.Primes;
 
 public class Problem5 extends EulerSolution
 {
@@ -17,10 +18,25 @@ public class Problem5 extends EulerSolution
 	
 	int getSmallestMultiplieRange(int from, int to)
 	{
-		for(int candidate = to;;candidate += 1)
+		ArrayList<Integer> highestDissonantFactors = new ArrayList<Integer>();
+		
+		for(int candidate = to -1 ; candidate >= from ; candidate--)
 		{
 			boolean accept = true;
-			for(int challenger = from; challenger < to; challenger++)
+			for(int challenger : highestDissonantFactors)
+				if(candidate % challenger == 0)
+				{
+					accept = false;
+					break;
+				}
+			if(accept)
+				highestDissonantFactors.add(candidate);
+		}
+		
+		for(int candidate = to;;candidate += to)
+		{
+			boolean accept = true;
+			for(int challenger : highestDissonantFactors)
 				if(candidate % challenger != 0)
 				{
 					accept = false;

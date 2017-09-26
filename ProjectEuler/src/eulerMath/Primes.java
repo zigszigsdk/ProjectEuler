@@ -43,23 +43,23 @@ public class Primes
 	
 	public boolean isPrime(BigInteger candidate)
 	{
-	    if(!candidate.isProbablePrime(GUESS_CERTAINTY))
-	        return false;
-
-	    if(candidate.equals(TWO))
+		if(!candidate.isProbablePrime(GUESS_CERTAINTY))
+			return false;
+		
+		if(candidate.equals(TWO))
 			return true;
-	    
-	    if(candidate.mod(TWO).equals(ZERO))	
-	        return false;
-
-	    BigInteger candidateSqrt = sqrt.floor(candidate);
-	    
-	    for(BigInteger challenger = THREE
-	    ;	challenger.compareTo(candidateSqrt) < 0
-	    ;	challenger = challenger.add(TWO)
-	    )
-	        if (candidate.mod(challenger).equals(ZERO))
-	            return false;
+		
+		if(candidate.mod(TWO).equals(ZERO))	
+			return false;
+		
+		BigInteger candidateSqrt = sqrt.floor(candidate);
+		
+		for(BigInteger challenger = THREE
+		;	challenger.compareTo(candidateSqrt) < 0
+		;	challenger = challenger.add(TWO)
+		)
+			if(candidate.mod(challenger).equals(ZERO))
+				return false;
 
 	    return true;
 	}
@@ -69,22 +69,22 @@ public class Primes
 		if(candidate == 1)
 			return false;
 		
-	    if(candidate == 2)
+		if(candidate == 2)
 			return true;
-	    
-	    if(candidate % 2 == 0)	
-	        return false;
+		
+		if(candidate % 2 == 0)	
+			return false;
 
-	    int candidateSqrt = (int)Math.sqrt(candidate);
+		int candidateSqrt = (int)Math.sqrt(candidate);
 
-	    for(int challenger = 3
-	    ;	challenger <= candidateSqrt
-	    ;	challenger += 2
-	    )
-	        if (candidate % challenger == 0)
-	            return false;
+		for(int challenger = 3
+		;	challenger <= candidateSqrt
+		;	challenger += 2
+		)
+			if (candidate % challenger == 0)
+				return false;
 
-	    return true;
+		return true;
 	}
 	
 	public BigInteger getNthAfter(BigInteger nth, BigInteger after) 

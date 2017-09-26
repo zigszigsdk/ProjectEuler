@@ -1,15 +1,15 @@
-package problem2;
+package problem0002;
 
 import problemResult.*;
 
-public class Problem2 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	
 	FibonacciSequencer fibonacciSequencer;
 	
-	public Problem2() { this(new FibonacciSequencer());}
+	public Solution() { this(new FibonacciSequencer());}
 	
-	public Problem2(FibonacciSequencer fibonacciSequencer)
+	public Solution(FibonacciSequencer fibonacciSequencer)
 	{
 		this.fibonacciSequencer  = fibonacciSequencer;
 	}

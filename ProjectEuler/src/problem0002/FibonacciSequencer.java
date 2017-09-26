@@ -1,4 +1,4 @@
-package problem2;
+package problem0002;
 
 public class FibonacciSequencer
 {

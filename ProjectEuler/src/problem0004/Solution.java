@@ -1,15 +1,15 @@
-package problem4;
+package problem0004;
 
 import problemResult.*;
 
-public class Problem4 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	Palindrome palindrome;
 	Factor factor;
 	
-	public Problem4() { this(new Palindrome(), new Factor()); }
+	public Solution() { this(new Palindrome(), new Factor()); }
 	
-	public Problem4(Palindrome palindrome, Factor factor)
+	public Solution(Palindrome palindrome, Factor factor)
 	{
 		this.palindrome = palindrome;
 		this.factor = factor;

@@ -1,9 +1,9 @@
-package problem5;
+package problem0005;
 
 import problemResult.*;
 import java.util.ArrayList;
 
-public class Problem5 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	protected long getTestValue()
 	{

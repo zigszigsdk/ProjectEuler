@@ -1,18 +1,18 @@
-package problem1;
+package problem0001;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 
 import problemResult.*;
 
-public class Problem1 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	MultipleFinder finder;
 	ArrayList<Integer> multipliers;
 	
-	public Problem1() { this(new ArrayList<Integer>(Arrays.asList(3, 5)), new MultipleFinder());}
+	public Solution() { this(new ArrayList<Integer>(Arrays.asList(3, 5)), new MultipleFinder());}
 	
-	public Problem1(ArrayList<Integer> multipliers, MultipleFinder finder)
+	public Solution(ArrayList<Integer> multipliers, MultipleFinder finder)
 	{
 		this.multipliers = multipliers;
 		this.finder = finder;

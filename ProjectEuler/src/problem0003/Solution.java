@@ -1,4 +1,4 @@
-package problem3;
+package problem0003;
 
 import problemResult.*;
 import java.math.BigInteger;
@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import eulerMath.BigIntegerSquareRoot;
 import eulerMath.Primes;
 
-public class Problem3 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	final static BigInteger ZERO = BigInteger.ZERO;
 	final static BigInteger ONE = BigInteger.ONE;
@@ -16,9 +16,9 @@ public class Problem3 extends EulerSolution
 	Primes primes;
 	BigIntegerSquareRoot sqrt;
 	
-	public Problem3() { this(new Primes(), new BigIntegerSquareRoot());}
+	public Solution() { this(new Primes(), new BigIntegerSquareRoot());}
 	
-	public Problem3(Primes primes, BigIntegerSquareRoot sqrt)
+	public Solution(Primes primes, BigIntegerSquareRoot sqrt)
 	{
 		this.primes  = primes;
 		this.sqrt = sqrt;

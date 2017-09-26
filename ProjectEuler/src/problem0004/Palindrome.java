@@ -1,4 +1,4 @@
-package problem4;
+package problem0004;
 
 public class Palindrome
 {

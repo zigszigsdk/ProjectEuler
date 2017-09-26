@@ -1,4 +1,4 @@
-package problem9;
+package problem0009;
 
 public final class PythagoreanTriplet
 {

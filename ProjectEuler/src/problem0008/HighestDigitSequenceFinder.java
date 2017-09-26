@@ -1,4 +1,4 @@
-package problem8;
+package problem0008;
 
 public final class HighestDigitSequenceFinder
 {

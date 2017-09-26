@@ -1,18 +1,18 @@
-package problem7;
+package problem0007;
 
 import problemResult.*;
 import eulerMath.Primes;
 import java.math.BigInteger;
 
-public class Problem7 extends EulerSolution
+public class Solution extends EulerSolution
 {
 	static final BigInteger ZERO = BigInteger.ZERO;
 	
 	final Primes primes;
 	
-	public Problem7() { this(new Primes()); }
+	public Solution() { this(new Primes()); }
 	
-	public Problem7(Primes primes)
+	public Solution(Primes primes)
 	{
 		this.primes = primes;
 	}

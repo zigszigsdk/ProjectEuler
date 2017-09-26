@@ -1,8 +1,8 @@
-package problem9;
+package problem0009;
 
 import problemResult.*;
 
-public final class Problem9 extends EulerSolution
+public final class Solution extends EulerSolution
 {	
 	
 	protected long getTestValue()

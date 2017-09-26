@@ -14,12 +14,12 @@ public class Problem2 extends EulerSolution
 		this.fibonacciSequencer  = fibonacciSequencer;
 	}
 	
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return calculateSumOfEvensBelow(100);
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return calculateSumOfEvensBelow(4000000);
 	}

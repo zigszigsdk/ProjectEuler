@@ -25,15 +25,15 @@ public abstract class EulerSolution
 		return getResult(() -> getActualValue());
 	}
 	
-	ProblemResult getResult(Supplier<Integer> getValue)
+	ProblemResult getResult(Supplier<Long> getValue)
 	{
 		Timestamp before = new Timestamp(System.currentTimeMillis());
-		int value = getValue.get();
+		long value = getValue.get();
 		Timestamp after = new Timestamp(System.currentTimeMillis());
 		
 		return new ProblemResult(value, after.getTime()-before.getTime());
 	}
 	
-	abstract protected int getTestValue();
-	abstract protected int getActualValue();
+	abstract protected long getTestValue();
+	abstract protected long getActualValue();
 }

@@ -15,12 +15,12 @@ public class Problem4 extends EulerSolution
 		this.factor = factor;
 	}
 	
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return getLargestPalindromeOfTwoProductsUnder(100);
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return getLargestPalindromeOfTwoProductsUnder(1000);
 	}

@@ -3,6 +3,9 @@ package problem3;
 import problemResult.*;
 import java.math.BigInteger;
 
+import eulerMath.BigIntegerSquareRoot;
+import eulerMath.Primes;
+
 public class Problem3 extends EulerSolution
 {
 	final static BigInteger ZERO = BigInteger.ZERO;
@@ -21,12 +24,12 @@ public class Problem3 extends EulerSolution
 		this.sqrt = sqrt;
 	}
 	
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return findLargestPrimeFactorOf(new BigInteger("13195"));
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return findLargestPrimeFactorOf(new BigInteger("600851475143"));
 	}

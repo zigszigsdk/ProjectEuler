@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class Problem5 extends EulerSolution
 {
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return getSmallestMultiplieRange(1, 10);
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return getSmallestMultiplieRange(1, 20);
 	}

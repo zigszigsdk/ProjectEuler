@@ -11,7 +11,7 @@ public class ProblemResult
 		this.msTaken = msTaken;
 	}
 	
-	public ProblemResult(int value, long msTaken) { this(Integer.toString(value), msTaken); }
+	public ProblemResult(long value, long msTaken) { this(Long.toString(value), msTaken); }
 	
 	public ProblemResult(double value, long msTaken) { this(Double.toString(value), msTaken); }
 	

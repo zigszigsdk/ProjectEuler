@@ -13,6 +13,8 @@ public class EntryPoint
 				, new problem4.Problem4()
 				, new problem5.Problem5()
 				, new problem6.Problem6()
+				, new problem7.Problem7()
+				, new problem8.Problem8()
 				};
 		
 		for(int index = 0; index < resultGenerators.length; index++)

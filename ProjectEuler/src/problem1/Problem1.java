@@ -18,12 +18,12 @@ public class Problem1 extends EulerSolution
 		this.finder = finder;
 	}
 	
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return calculate(multipliers, 10);
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return calculate(multipliers, 1000);
 	}

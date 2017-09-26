@@ -4,12 +4,12 @@ import problemResult.*;
 
 public class Problem6 extends EulerSolution
 {
-	protected int getTestValue()
+	protected long getTestValue()
 	{
 		return getDifferenceRange(1, 10);
 	}
 	
-	protected int getActualValue()
+	protected long getActualValue()
 	{
 		return getDifferenceRange(1, 100);
 	}

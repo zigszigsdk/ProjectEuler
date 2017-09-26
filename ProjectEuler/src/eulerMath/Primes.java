@@ -1,6 +1,7 @@
 package eulerMath;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.math.BigInteger;
 
 public class Primes
@@ -141,5 +142,53 @@ public class Primes
 
 			candidate++;
 		}
+	}
+	
+	public ArrayList<Integer> getAllUpTo(int to)
+	{
+		boolean[] primeSieve = new boolean[to];
+		
+		primeSieve[2] = true;
+		for(int potentialPrime = 3; potentialPrime < to; potentialPrime +=2)
+			primeSieve[potentialPrime] = true;
+		
+		ArrayList<Integer> primesThusFar = new ArrayList<Integer>();
+		primesThusFar.add(2);
+		
+		for(int candidate = 3; candidate < to; candidate += 2)
+		{
+			if(!primeSieve[candidate])
+				continue;
+			
+			boolean accept = true;
+			int candidateSqrt= (int)Math.sqrt(candidate);
+			
+			for(int challenger : primesThusFar)
+			{	
+				if(challenger > candidateSqrt)
+					break;
+			
+				if(candidate % challenger == 0) 
+				{
+					accept = false;
+					break;
+				}
+			}
+			if(!accept)
+				continue;
+
+			primesThusFar.add(candidate);
+			
+			for(int extrapolationFactor : primesThusFar) 
+			{
+				int extrapolationCandidate = extrapolationFactor*candidate;
+				if(extrapolationCandidate >= to)
+					break;
+				
+				primeSieve[extrapolationCandidate] = false;
+			}
+		}
+		
+		return primesThusFar;
 	}
 }

@@ -1,5 +1,7 @@
 package problem0010;
 
+import java.util.ArrayList;
+
 import eulerMath.Primes;
 import problemResult.*;
 
@@ -16,12 +18,21 @@ public final class Solution extends EulerSolution
 	
 	protected long getTestValue()
 	{
-		return sumPrimesFromTo(0, 10);
+		return sum(primes.getAllUpTo(10));//sumPrimesFromTo(0, 10);
 	}
 	
 	protected long getActualValue()
 	{
-		return sumPrimesFromTo(0, 2000000);
+		return sum(primes.getAllUpTo(2000000));//sumPrimesFromTo(0, 2000000);
+	}
+	
+	long sum(ArrayList<Integer> toSum)
+	{
+		long result = 0;
+		for(int value : toSum)
+			result += value;
+		
+		return result;
 	}
 	
 	long sumPrimesFromTo(int from, int to)
